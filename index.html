@@ -10,7 +10,7 @@
   <body>
     <main>
       <section class="player player--0 player--active">
-        <h2 class="name" id="name--0">Decision 1 vs</h2>
+        <h2 class="name" id="name--0">Possibility #1</h2>
         <p class="score" id="score--0">43</p>
         <div class="current">
           <p class="current-label">Current</p>
@@ -18,7 +18,7 @@
         </div>
       </section>
       <section class="player player--1">
-        <h2 class="name" id="name--1">Decision 2</h2>
+        <h2 class="name" id="name--1">Possibility #2</h2>
         <p class="score" id="score--1">24</p>
         <div class="current">
           <p class="current-label">Current</p>
@@ -50,14 +50,17 @@ const btnHold = document.querySelector('.btn--hold');
 let scores, currentScore, activePlayer, playing;
 
 const init = function () {
+
+  alert("Welcome to The Decision Game. You will be asked for the two things you're deciding between in the next two messages.")
+
   document.getElementById('name--0').textContent = prompt(
-    'what is the desicion being made?'
+    'What is possibility #1?'
   );
   document.getElementById('name--1').textContent = prompt(
-    'what is the the opposing desicion?'
+    'What is possibility #2?'
   );
-  prompt(
-    'Whichever decision gets 20 points first will win. you can add your current score to the total by pressing the hold button. If you roll a "1" your current score will reset and the opposing decision factor will roll the dice (PRESS ENTER)'
+  alert(
+    'Whoever gets 20 points first will make their possibility a reality. You can add your current score to the total by pressing the hold button. If you roll a "1" your current score will reset and the other person will roll the dice. Have fun!'
   );
   scores = [0, 0];
   currentScore = 0;
